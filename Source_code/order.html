@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/order.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/responsive.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<!-- header -->
+<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="">Communication</a>
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="furniture.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Introduce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline mt-2 mt-md-0" method="get" action="search.html">
+                <input class="form-control mr-sm-2" type="text" placeholder="Seach" aria-label="Search"
+                       name="keyword_tensanpham">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Seach</button>
+            </form>
+        </div>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                    <a class="nav-link" href="shop.html">Order</a>
+            </li>
+            <li class="nav-item text-nowrap">
+                <!-- Nếu chưa đăng nhập thì hiển thị nút Đăng nhập -->
+                <a class="nav-link" href="login.html">Log in</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- end header -->
+
+<main role="main">
+    <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+    <div class="container mt-4">
+        <form class="needs-validation" name="frmthanhtoan" method="post"
+              action="#">
+            <input type="hidden" name="kh_tendangnhap" value="dnpcuong">
+
+            <div class="py-5 text-center">
+                <i class="fa fa-credit-card fa-4x" aria-hidden="true"></i>
+                <h2>Pay</h2>
+                <p class="lead">Please check Customer information, Cart information before placing an Order.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-muted">Order</span>
+                        <span class="badge badge-secondary badge-pill">2</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <input type="hidden" name="sanphamgiohang[1][sp_ma]" value="2">
+                        <input type="hidden" name="sanphamgiohang[1][gia]" value="11800000.00">
+                        <input type="hidden" name="sanphamgiohang[1][soluong]" value="2">
+
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0"><img src="https://noithatvanphonggiare.com/media/product/5517_tu_quan_ao_go_hien_dai_da_nang_tqa42.jpg" style="width: 15%">Versatile modern wooden wardrobe</h6>
+                                <strong class="text-muted">800.000đ</strong>
+                            </div>
+                        </li>
+                        <input type="hidden" name="sanphamgiohang[2][sp_ma]" value="4">
+                        <input type="hidden" name="sanphamgiohang[2][gia]" value="14990000.00">
+                        <input type="hidden" name="sanphamgiohang[2][soluong]" value="8">
+
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0" >  <img src="https://noithatvanphonggiare.com/media/product/5095_ke_go_tu_nhien_treo_quan_ao_gia_re_tqa25.jpg"style="width: 15%;"> Wooden shelf for hanging clothes</h6>
+                                <strong class="text-muted">500.000đ</strong>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total</span>
+                            <strong>1.300.000đ</strong>
+                        </li>
+                    </ul>
+
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Repost code">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-secondary">Confirm</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-8 order-md-1">
+                    <h4 class="mb-3">Customer information</h4>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="kh_ten">Name</label>
+                            <input type="text" class="form-control" name="kh_ten" id="kh_ten">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="kh_gioitinh">Sex</label>
+                            <input type="text" class="form-control" name="kh_gioitinh" id="kh_gioitinh">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="kh_diachi">Address</label>
+                            <input type="text" class="form-control" name="kh_diachi" id="kh_diachi">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="kh_dienthoai">Phone</label>
+                            <input type="number" class="form-control" name="kh_dienthoai" id="kh_dienthoai" style="width: 60%">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="kh_email">Email</label>
+                            <input type="email" class="form-control" name="kh_email" id="kh_email" style="width: 60%">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="kh_ngaysinh">Date</label>
+                            <input type="date" class="form-control" name="kh_ngaysinh" id="kh_ngaysinh" style="width: 60%">
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3">Payments</h4>
+
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="httt-1" name="httt_ma" type="radio" class="custom-control-input" required=""
+                                   value="1">
+                            <label class="custom-control-label" for="httt-1">Cash</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="httt-2" name="httt_ma" type="radio" class="custom-control-input" required=""
+                                   value="2">
+                            <label class="custom-control-label" for="httt-2">Transfer</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="httt-3" name="httt_ma" type="radio" class="custom-control-input" required=""
+                                   value="3">
+                            <label class="custom-control-label" for="httt-3">Ship COD</label>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                    <button id="orderButton" class="btn btn-primary btn-lg btn-block" type="submit" name="btnDatHang">Order</button>
+                </div>
+            </div>
+        </form>
+               <script>
+            document.getElementById("orderButton").addEventListener("click", function() {
+                alert("Order Success");
+            });
+        </script>
+
+    </div>
+    <!-- End block content -->
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/popperjs/popper.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Custom script - Các file js do mình tự viết -->
+<script src="../assets/js/app.js"></script>
+
+</body>
+</html>
